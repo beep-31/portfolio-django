@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Studio</title>
+    <link rel="stylesheet" href="static/designx/carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/designx/carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/designx/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<!-- svg icons settings -->
+
+<svg style="display: none;">
+    <symbol id="calendar" viewBox="0 0 512 512">
+        <g>
+            <g>
+                <path d="M452,40h-24V0h-40v40H124V0H84v40H60C26.916,40,0,66.916,0,100v352c0,33.084,26.916,60,60,60h392
+                    c33.084,0,60-26.916,60-60V100C512,66.916,485.084,40,452,40z M472,452c0,11.028-8.972,20-20,20H60c-11.028,0-20-8.972-20-20V188
+                    h432V452z M472,148H40v-48c0-11.028,8.972-20,20-20h24v40h40V80h264v40h40V80h24c11.028,0,20,8.972,20,20V148z"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="76" y="230" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="156" y="230" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="236" y="230" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="316" y="230" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="396" y="230" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="76" y="310" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="156" y="310" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="236" y="310" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="316" y="310" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="76" y="390" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="156" y="390" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="236" y="390" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="316" y="390" width="40" height="40"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="396" y="310" width="40" height="40"/>
+            </g>
+        </g>
+    </symbol>
+</svg>
+
+<svg style="display: none;">
+    <symbol id="folder" viewBox="0 -39 476.11669 476">
+        <path d="m466.117188 129.417969-38.070313 258.792969h-379.460937l-38.589844-258.792969zm0 0" fill="#00efd1"/><path d="m435.425781 60.21875v69.199219h-394.738281v-119.507813h155.367188v50.308594zm0 0" fill="#00acea"/><path d="m466.117188 119.058594h-21.0625v-58.839844c0-5.523438-4.105469-10.160156-9.628907-10.160156h-229.371093v-40.148438c-.003907-2.636718-1.066407-5.164062-2.941407-7.011718-1.878906-1.851563-4.421875-2.8750005-7.058593-2.8398442h-155.367188c-2.601562-.0195313-5.09375 1.0195312-6.910156 2.8789062-1.816406 1.855469-2.800782 4.375-2.722656 6.972656v109.148438h-21.058594c-2.933594.082031-5.6875 1.414062-7.578125 3.65625-1.890625 2.242187-2.730469 5.1875-2.3125 8.089844l38.589843 258.757812c.734376 4.894531 4.941407 8.507812 9.890626 8.496094h379.460937c4.945313.035156 9.164063-3.578125 9.894531-8.46875l38.070313-258.753906c.421875-2.921876-.425781-5.890626-2.328125-8.152344-1.882813-2.242188-4.640625-3.5625-7.566406-3.625zm-415.0625-99h135v40.160156c.007812 2.636719 1.066406 5.160156 2.945312 7.007812 1.878906 1.847657 4.421875 2.867188 7.054688 2.832032h229v49h-374zm368.355468 358h-362.207031l-35.605469-239h432.9375zm0 0" fill="#083863"/>  
+    </symbol>
+</svg>
+
+<svg style="display: none;">
+    <symbol id="insta" viewBox="0 0 511 511.9">
+        <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/>
+    </symbol>
+</svg>
+
+<svg style="display: none;">
+    <symbol id="facebook" viewBox = "-110 1 511 511.99896">
+        <path d="m207.363281 126.734375c.699219-.789063 3.96875-3.367187 16.808594-3.367187l42.097656-.015626c13.695313 0 24.832031-11.140624 24.832031-24.835937v-73.578125c0-13.671875-11.121093-24.8125-24.792968-24.835938l-62.53125-.101562c-38.59375 0-71.402344 12.730469-94.878906 36.820312-23.371094 23.980469-35.726563 57.457032-35.726563 96.804688v39.683594h-47.835937c-13.695313 0-24.835938 11.140625-24.835938 24.835937v79.242188c0 13.695312 11.140625 24.835937 24.835938 24.835937h47.835937v184.941406c0 13.695313 11.140625 24.835938 24.835937 24.835938h81.992188c13.695312 0 24.835938-11.140625 24.835938-24.835938v-184.9375h58.472656c13.695312 0 24.832031-11.144531 24.832031-24.832031l.03125-79.246093c0-8.996094-4.894531-17.320313-12.777344-21.722657-3.652343-2.039062-7.902343-3.117187-12.285156-3.117187h-58.273437v-31.351563c0-10.21875 1.375-13.917969 2.527343-15.222656zm0 0"/>
+    </symbol>
+</svg>
+
+<svg style="display: none;">
+    <symbol id="twitter" viewBox = "0 0 512 512">
+        <g>
+            <g>
+                <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                    C480.224,136.96,497.728,118.496,512,97.248z"/>
+            </g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+</svg>
+
+<svg style="display: none;">
+    <symbol id="phone" viewBox="0 0 508 508">
+        <g>
+            <g>
+                <rect x="131.15" y="41" width="81.9" height="16.4"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path d="M172.15,409.7c-18.1,0-32.8,14.7-32.8,32.8s14.7,32.8,32.8,32.8c18.1,0,32.8-14.7,32.8-32.8
+                    C204.85,424.4,190.15,409.7,172.15,409.7z M172.15,458.8c-9,0-16.4-7.4-16.4-16.4s7.3-16.4,16.4-16.4c9,0,16.4,7.4,16.4,16.4
+                    C188.55,451.5,181.15,458.8,172.15,458.8z"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="65.55" y="434.3" width="49.2" height="16.4"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="229.45" y="434.3" width="49.2" height="16.4"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path d="M409.75,106.5h-65.5V0H0.05v508h344.1V303.2h65.5c54.2,0,98.3-44.1,98.3-98.3C507.95,150.7,463.95,106.5,409.75,106.5z
+                     M327.85,491.6h-0.1H16.45V16.4h311.4v90.1h-24.6V81.9H41.05v311.4h262.2v-90.1h24.6V491.6z M286.85,314.7v62.2H57.45V98.3h229.4
+                    v8.6c-50.4,4.2-90.1,46.5-90.1,97.9c0,35.4,18.7,67.5,49.2,85.1v65.8L286.85,314.7z M409.75,286.8h-118.1l-29.4,29.4V280l-4.5-2.3
+                    c-27.6-14.1-44.7-42-44.7-72.9c0-45.2,36.8-81.9,81.9-81.9h114.7c45.2,0,81.9,36.8,81.9,81.9
+                    C491.65,250,454.95,286.8,409.75,286.8z"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path d="M270.45,172.1c-18.1,0-32.8,14.7-32.8,32.8c0,18.1,14.7,32.8,32.8,32.8c18.1,0,32.8-14.7,32.8-32.8
+                    C303.25,186.8,288.55,172.1,270.45,172.1z M270.45,221.2c-9,0-16.4-7.4-16.4-16.4s7.3-16.4,16.4-16.4c9,0,16.4,7.4,16.4,16.4
+                    C286.85,213.9,279.45,221.2,270.45,221.2z"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path d="M352.35,172.1c-18.1,0-32.8,14.7-32.8,32.8c0,18.1,14.7,32.8,32.8,32.8c18.1,0,32.8-14.7,32.8-32.8
+                    C385.15,186.8,370.45,172.1,352.35,172.1z M352.35,221.2c-9,0-16.4-7.4-16.4-16.4s7.3-16.4,16.4-16.4c9,0,16.4,7.4,16.4,16.4
+                    C368.75,213.9,361.45,221.2,352.35,221.2z"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path d="M434.35,172.1c-18.1,0-32.8,14.7-32.8,32.8c0,18.1,14.7,32.8,32.8,32.8c18.1,0,32.8-14.7,32.8-32.8
+                    C467.05,186.8,452.35,172.1,434.35,172.1z M434.35,221.2c-9,0-16.4-7.4-16.4-16.4s7.3-16.4,16.4-16.4c9.1,0,16.4,7.4,16.4,16.4
+                    C450.65,213.9,443.35,221.2,434.35,221.2z"/>
+            </g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+    </symbol>
+</svg>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                   DesignX
+                </div>
+            <nav class="nav" id="nav">
+                <a href="" data-scroll="#intro">Home</a>
+                <a href="" data-scroll="#about">About</a>
+                <a href="" data-scroll="#services">Servicing</a>
+                <a href="" data-scroll="#works">Portfolio</a>
+                <a href="" data-scroll="#blog">Blog</a>
+                <a href="" data-scroll="#contact">Contact Us</a>
+            </nav>
+            <button class="burger" id="navButton" type="button">
+                <span class="burger-item"></span>
+            </button>
+            </div>
+        </div>
+    </header>
+    <section class="intro" id="intro" style="background: url('static/designx/img/intro/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-color: #202020;">
+        <div class="container">
+            <div class="intro-inner">
+                <div class="intro-title">
+                    <h3>Web development project</h3>
+                </div>
+                <div class="intro-txt">
+                    <p>Very suitable to support all web development projects</p>
+                </div>
+                <div class="intro-buttons">
+                    <button class="services-btn" data-scroll="#services">Our Services</button>
+                    <button class="hire-btn" data-scroll="#contact">Hire Us Now</button>
+                </div>
+                <div class="intro-arrow">
+                    <img src="static/designx/img/intro/arrow.png" alt="" data-scroll="#works">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us" id="about">
+        <div class="container">
+            <div class="about-us-inner">
+                <div class="about-us-txt">
+                    <div class="title">
+                        About Us
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos suscipit architecto reprehenderit alias obcaecati, perspiciatis itaque maxime, id beatae quasi, eveniet accusamus. Ut, fuga accusamus.
+                    </div>
+                </div>
+
+                <div class="about-us-blocks">
+                    <div class="block">
+                        <div class="block-icon">
+                            <img src="static/designx/img/about us/www.png" alt="">
+                        </div>
+                        <div class="block-title">
+                            <h4>Awesome Icons</h4>
+                        </div>
+                        <div class="block-description">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, soluta!</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="block-icon">
+                            <img src="static/designx/img/about us/one_page.png" alt="">
+                        </div>
+                        <div class="block-title">
+                            <h4>One Page</h4>
+                        </div>
+                        <div class="block-description">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, soluta!</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="block-icon">
+                            <img src="static/designx/img/about us/responsive.png" alt="">
+                        </div>
+                        <div class="block-title">
+                            <h4>Fully Responsive</h4>
+                        </div>
+                        <div class="block-description">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, soluta!</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="container-inner">
+            <div class="services-inner">
+                <div class="services-txt">
+                    <div class="services-title">
+                        <h3>Our Services</h3>
+                    </div>
+                    <div class="services-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam illo voluptatem iste nam aliquam nihil accusamus quos quo ab at?
+                    </div>
+                </div>
+                <div class="services-block">
+                    <div class="block">
+                        <svg class="block-img">
+                            <use xlink:href="#phone">
+                        </svg>
+                        <div class="txt">
+                            <div class="title">
+                                <h3>Research</h3>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut suscipit ad in ea, deserunt voluptate excepturi!</p>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-btn" data-scroll="#contact">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="block">
+                        <svg class="block-img">
+                            <use xlink:href="#phone">
+                        </svg>
+                        <div class="txt">
+                            <div class="title">
+                                <h3>Portfolio</h3>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut suscipit ad in ea, deserunt voluptate excepturi!</p>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-btn" data-scroll="#contact">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="block">
+                        <svg class="block-img">
+                            <use xlink:href="#phone">
+                        </svg>
+                        <div class="txt">
+                            <div class="title">
+                                <h3>Support</h3>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut suscipit ad in ea, deserunt voluptate excepturi!</p>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-btn" data-scroll="#contact">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="block">
+                        <svg class="block-img">
+                            <use xlink:href="#phone">
+                        </svg>
+                        <div class="txt">
+                            <div class="title">
+                                <h3>Documentation</h3>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut suscipit ad in ea, deserunt voluptate excepturi!</p>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-btn" data-scroll="#contact">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="block">
+                        <svg class="block-img">
+                            <use xlink:href="#phone">
+                        </svg>
+                        <div class="txt">
+                            <div class="title">
+                                <h3>Development</h3>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut suscipit ad in ea, deserunt voluptate excepturi!</p>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-btn" data-scroll="#contact">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="block">
+                        <svg class="block-img">
+                            <use xlink:href="#phone">
+                        </svg>
+                        <div class="txt">
+                            <div class="title">
+                                <h3>Design</h3>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut suscipit ad in ea, deserunt voluptate excepturi!</p>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-btn" data-scroll="#contact">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="latest-works" id="works">
+        <div class="container-inner">
+            <div class="latest-works-inner">
+                <div class="txt">
+                    <div class="title">Latest Works</div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad perspiciatis eum voluptate ullam magnam voluptatum debitis mollitia distinctio vitae. Eius officia ut quos!
+                    </div>
+                </div>
+                    <div class="tab">
+                        <div class="tab-header" id="tab-header">
+                            <div class="tab-header-element active">Branding</div>
+                            <div class="tab-header-element">Web Design</div>
+                            <div class="tab-header-element">UI/UX Design</div>
+                            <div class="tab-header-element">All</div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-content-element fade" id="element">
+                                <div class="tab-content-img brand">
+                                    <div class="tab-info">
+                                        <div class="title">The Kitchens</div>
+                                        <div class="text">Branding</div>
+                                    </div>
+                                    <img src="static/designx/img/tab/mockup.png" alt="">
+                                </div>
+                                <div class="tab-content-img brand">
+                                    <div class="tab-info">
+                                        <div class="title">Eplemost</div>
+                                        <div class="text">Branding</div>
+                                    </div>
+                                    <img src="static/designx/img/tab/mockup2.png" alt="">
+                                </div>
+                                <div class="tab-content-img brand">
+                                    <div class="tab-info">
+                                        <div class="title">Oriflame</div>
+                                        <div class="text">Branding</div>
+                                    </div>
+                                    <img src="static/designx/img/tab/mockup3.png" alt="">
+                                </div>
+                                <div class="tab-content-img brand">
+                                    <div class="tab-info">
+                                        <div class="title">Frank Oak</div>
+                                        <div class="text">Branding</div>
+                                    </div>
+                                    <img src="static/designx/img/tab/mockup4.png" alt="">
+                                </div>
+                                <div class="tab-content-img brand">
+                                    <div class="tab-info">
+                                        <div class="title">Helio 3</div>
+                                        <div class="text">Branding</div>
+                                    </div>
+                                    <img src="static/designx/img/tab/mockup5.png" alt="">
+                                </div>
+                                <div class="tab-content-img brand">
+                                    <div class="tab-info">
+                                        <div class="title">Smart Watch</div>
+                                        <div class="text">Branding</div>
+                                    </div>
+                                    <img src="static/designx/img/tab/mockup6.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tab-content-element fade" id="element">
+                                <div class="tab-content-img web">
+                                    <img src="static/designx/img/tab/web.jpg" alt="">
+                                    <div class="tab-info">
+                                        <div class="title">Shout</div>
+                                        <div class="text">Web project</div>
+                                    </div>
+                                </div>
+                                <div class="tab-content-img web">
+                                    <img src="static/designx/img/tab/web2.jpg" alt="">
+                                    <div class="tab-info">
+                                        <div class="title">Digital Services</div>
+                                        <div class="text">Web project</div>
+                                    </div>
+                                </div>
+                                <div class="tab-content-img web">
+                                    <img src="static/designx/img/tab/web3.jpg" alt="">
+                                    <div class="tab-info">
+                                        <div class="title">Fashion</div>
+                                        <div class="text">Web project</div>
+                                    </div>
+                                </div>
+                                <div class="tab-content-img web">
+                                    <img src="static/designx/img/tab/web4.jpg" alt="">
+                                    <div class="tab-info">
+                                        <div class="title">Face.Works</div>
+                                        <div class="text">Web project</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content-element fade" id="element">
+                                <div class="tab-content-img ui">
+                                    <img src="static/designx/img/tab/ux1.png" alt="">
+                                    <div class="tab-info">
+                                        <div class="title">Design</div>
+                                        <div class="text"></div>
+                                    </div>
+                                </div>
+                                <div class="tab-content-img ui">
+                                    <img src="static/designx/img/tab/ux2.jpg" alt="">
+                                    <div class="tab-info">
+                                        <div class="title">Design</div>
+                                        <div class="text"></div>
+                                    </div>
+                                </div>
+                                <div class="tab-content-img ui">
+                                    <img src="static/designx/img/tab/ux3.png" alt="">
+                                    <div class="tab-info">
+                                        <div class="title">Design</div>
+                                        <div class="text"></div>
+                                    </div>
+                                </div>
+                                <div class="tab-content-img ui">
+                                    <img src="static/designx/img/tab/ux4.jpg" alt="">
+                                    <div class="tab-info">
+                                        <div class="title">Design</div>
+                                        <div class="text"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-inner">
+                <div class="pricing-txt">
+                    <div class="pricing-title">
+                        Pricing Plan
+                    </div>
+                    <div class="pricing-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus hic earum, accusamus nisi magnam, aliquid tempore voluptate ea explicabo modi, nulla maxime.
+                    </div>
+                </div>
+                <div class="pricing-blocks">
+                    <div class="block">
+                        <div class="block-header">
+                            <div class="block-title">
+                                Starter
+                            </div>
+                            <div class="price">
+                                <div class="price-txt">
+                                    <span class="dollar">$</span>9.99 <span class="month"> per month</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon fill="white" points="0,100 100,0 100,100"/>
+                            </svg>
+                        </div>
+                        <div class="block-content">
+                            <ul class="block-list">
+                                <li>1 Free Project</li>
+                                <li>1 Month For Free</li>
+                                <li>PHP Enabled</li>
+                                <li>24/7 Support</li>
+                            </ul>
+                        
+                        <div class="block-btn">
+                            <a href="#" class="order-btn">Order Now</a>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="block mh-30">
+                        <div class="block-header">
+                            <div class="block-title">
+                                Basic
+                            </div>
+                            <div class="price">
+                                <div class="price-txt">
+                                    <span class="dollar">$</span>29.99 <span class="month"> per month</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon fill="white" points="0,100 100,0 100,100"/>
+                            </svg>
+                        </div>
+                        <div class="block-content">
+                            <ul class="block-list">
+                                <li>3 Free Projects</li>
+                                <li>3 Months For Free</li>
+                                <li>PHP Enabled</li>
+                                <li>24/7 Support</li>
+                            </ul>
+                        
+                        <div class="block-btn">
+                            <a href="#" class="order-btn">Order Now</a>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="block">
+                        <div class="block-header">
+                            <div class="block-title">
+                                Ultimate
+                            </div>
+                            <div class="price">
+                                <div class="price-txt">
+                                    <span class="dollar">$</span>59.99 <span class="month"> per month</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon fill="white" points="0,100 100,0 100,100"/>
+                            </svg>
+                        </div>
+                        <div class="block-content">
+                            <ul class="block-list">
+                                <li>5 Free Projects</li>
+                                <li>6 Months For Free</li>
+                                <li>Whatever tecnology</li>
+                                <li>24/7 Support</li>
+                            </ul>
+                        
+                        <div class="block-btn">
+                            <a href="#" class="order-btn">Order Now</a>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team" id="team">
+        <div class="container">
+            <div class="team-inner">
+                <div class="team-title">
+                    Our Team Members
+                </div>
+                <div class="team-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt repudiandae nulla, consectetur similique nobis fuga esse sequi ut perspiciatis dolore!
+                </div>
+                <div class="team-slider owl-carousel owl-theme">
+                    <div class="slider-element">
+                        <div class="slider-image">
+                            <img src="static/designx/img/team/member1.png" alt="">
+                        </div>
+                        <div class="name">John Doe</div>
+                        <div class="position">General Manager</div>
+                        <div class="social-media">
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#insta"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <div class="slider-image">
+                            <img src="static/designx/img/team/member2.jpg" alt="">
+                        </div>
+                        <div class="name">Aleix Biru</div>
+                        <div class="position">Office Director</div>
+                        <div class="social-media">
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#insta"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <div class="slider-image">
+                            <img src="static/designx/img/team/member3.jpeg" alt="">
+                        </div>
+                        <div class="name">Ronobir Sign</div>
+                        <div class="position">Admin</div>
+                        <div class="social-media">
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#insta"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <div class="slider-image">
+                            <img src="static/designx/img/team/member4.jpg" alt="">
+                        </div>
+                        <div class="name">Marshall Bailey</div>
+                        <div class="position">Designer</div>
+                        <div class="social-media">
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#insta"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <div class="slider-image">
+                            <img src="static/designx/img/team/member5.jpg" alt="">
+                        </div>
+                        <div class="name">Kelly Matthews</div>
+                        <div class="position">Office Director</div>
+                        <div class="social-media">
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#insta"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <div class="slider-image">
+                            <img src="static/designx/img/team/member6.jpg" alt="">
+                        </div>
+                        <div class="name">Pierre Bell</div>
+                        <div class="position">Full Stack Developer</div>
+                        <div class="social-media">
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#insta"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="social-item">
+                                    <svg>
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="blog-inner">
+                <div class="blog-txt">
+                    <div class="blog-title">Blog</div>
+                    <div class="blog-description">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam alias earum deleniti eligendi labore distinctio, consectetur praesentium enim veniam. Delectus a ratione autem beatae odio.
+                    </div>
+                </div>
+                <div class="post-block">
+                    <div class="post">
+                        <div class="post-image">
+                            <img src="static/designx/img/blog/blog1.png" alt="">
+                        </div>
+                        <div class="post-inner">
+                            <div class="post-title">
+                                <h2>SEO Quis Vestibulum</h2>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-date">
+                                    <svg>
+                                        <use xlink:href="#calendar"></use>
+                                    </svg>
+                                    <p>21.02.2020</p>
+                                </div>
+                                <div class="post-about">
+                                    <svg>
+                                        <use xlink:href="#folder"></use>
+                                    </svg>
+                                    <p>Development</p>
+                                </div>
+                            </div>
+                            <div class="post-txt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint dignissimos aut optio recusandae modi veritatis illo incidunt, quibusdam autem.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post reverse">
+                        <div class="post-image">
+                            <img src="static/designx/img/blog/blog2.png" alt="">
+                        </div>
+                        <div class="post-inner">
+                            <div class="post-title">
+                                <h2>SEO Quis Vestibulum</h2>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-date">
+                                    <svg>
+                                        <use xlink:href="#calendar"></use>
+                                    </svg>
+                                    <p>21.02.2020</p>
+                                </div>
+                                <div class="post-about">
+                                    <svg>
+                                        <use xlink:href="#folder"></use>
+                                    </svg>
+                                    <p>Development</p>
+                                </div>
+                            </div>
+                            <div class="post-txt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint dignissimos aut optio recusandae modi veritatis illo incidunt, quibusdam autem.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-image">
+                            <img src="static/designx/img/blog/blog3.png" alt="">
+                        </div>
+                        <div class="post-inner">
+                            <div class="post-title">
+                                <h2>SEO Quis Vestibulum</h2>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-date">
+                                    <svg>
+                                        <use xlink:href="#calendar"></use>
+                                    </svg>
+                                    <p>21.02.2020</p>
+                                </div>
+                                <div class="post-about">
+                                    <svg>
+                                        <use xlink:href="#folder"></use>
+                                    </svg>
+                                    <p>Development</p>
+                                </div>
+                            </div>
+                            <div class="post-txt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint dignissimos aut optio recusandae modi veritatis illo incidunt, quibusdam autem.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-more">
+                        <div class="post reverse">
+                            <div class="post-image">
+                                <img src="static/designx/img/blog/blog4.jpg" alt="">
+                            </div>
+                            <div class="post-inner">
+                                <div class="post-title">
+                                    <h2>SEO Quis Vestibulum</h2>
+                                </div>
+                                <div class="post-info">
+                                    <div class="post-date">
+                                        <svg>
+                                            <use xlink:href="#calendar"></use>
+                                        </svg>
+                                        <p>21.02.2020</p>
+                                    </div>
+                                    <div class="post-about">
+                                        <svg>
+                                            <use xlink:href="#folder"></use>
+                                        </svg>
+                                        <p>Development</p>
+                                    </div>
+                                </div>
+                                <div class="post-txt">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint dignissimos aut optio recusandae modi veritatis illo incidunt, quibusdam autem.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="static/designx/img/blog/blog5.png" alt="">
+                            </div>
+                            <div class="post-inner">
+                                <div class="post-title">
+                                    <h2>SEO Quis Vestibulum</h2>
+                                </div>
+                                <div class="post-info">
+                                    <div class="post-date">
+                                        <svg>
+                                            <use xlink:href="#calendar"></use>
+                                        </svg>
+                                        <p>21.02.2020</p>
+                                    </div>
+                                    <div class="post-about">
+                                        <svg>
+                                            <use xlink:href="#folder"></use>
+                                        </svg>
+                                        <p>Development</p>
+                                    </div>
+                                </div>
+                                <div class="post-txt">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint dignissimos aut optio recusandae modi veritatis illo incidunt, quibusdam autem.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-more-block">
+                        <button class="view-more-btn" id="view">View More</button>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact" style="background: url('static/designx/img/contact/bg.png');
+    background-position: center center;
+    background-size: cover;">
+        <div class="container-small">
+            <div class="contact-inner">
+                <div class="contact-intro">
+                    <div class="title">
+                        Contact Us
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit modi consequuntur exercitationem veniam. Vitae sint error obcaecati quisquam quas minima qui aliquid maxime modi?
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="block">
+                        <div class="block-img location">
+                            <div class="img">
+                                <img src="static/designx/img/contact/location.png" alt="">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p>Nobinagar savar, Dhaka</p>
+                            <p>Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="block-img phone">
+                            <div class="img">
+                                <img src="static/designx/img/contact/phone.png" alt="">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p>+8801743331996</p>
+                            <p>+8801928737807</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="block-img email">
+                            <div class="img">
+                                <img src="static/designx/img/contact/mail.png" alt="">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p>quickmasud@gmail.com</p>
+                            <p>quickmasud@yahoo.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-block">
+                    <form action="">
+                    <div class="top-forms">
+                        <input type="text" name="name" class="top-form" placeholder="Your name">
+                        <input type="text" name="email" class="top-form" placeholder="Your email">
+                    </div>
+                    <div class="bottom-form">
+                        <textarea name="text" class="text-form" cols="100" rows="12" placeholder="Your message"></textarea>
+                    </div>
+                    <div class="contact-buttondesignx/">
+                        <button class="send-btn" type="submit">Send</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        All rights Reserved © 2020
+    </footer>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+    <script src="static/designx/scripts/owl.carousel.min.js"></script>
+    <script src="static/designx/scripts/script.js"></script>
+    <script src="static/designx/scripts/app.js"></script>
+</body>
+</html>
